@@ -1,129 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Mart</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material Design Tab Grid with Backgrounds and Icons</title>
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Root grid container */
+    .grid-container {
+      display: grid;
+      height: 100vh;
+      gap: 30px;
+      padding: 20px;
+      width: 95%;
+      margin: 0 auto;
+    }
+    
+    /* Responsive grid layout */
+    @media (min-width: 768px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 767px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+      }
+    }
+    
+    /* Individual tab styles */
+    .tab {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      font-size: 1.5em;
+      font-weight: bold;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    
+    /* Background image styles for each tab */
+    .tab::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.6; /* Background opacity */
+      transition: opacity 0.3s;
+    }
+    /* Different images for each tab */
+    .tab:nth-child(1)::before { background-image: url('image1.jpg'); }
+    .tab:nth-child(2)::before { background-image: url('image2.jpg'); }
+    .tab:nth-child(3)::before { background-image: url('image3.jpg'); }
+    .tab:nth-child(4)::before { background-image: url('image4.jpg'); }
+    
+    /* Different overlay colors for each tab */
+    .tab:nth-child(1) { background-color: #3b82f6; } /* Blue */
+    .tab:nth-child(2) { background-color: #f97316; } /* Orange */
+    .tab:nth-child(3) { background-color: #10b981; } /* Green */
+    .tab:nth-child(4) { background-color: #f43f5e; } /* Pink */
+    
+    /* Hover effects */
+    .tab:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .tab:hover::before {
+      opacity: 0.8;
+    }
+    
+    /* Link styling */
+    .tab a {
+      color: inherit;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1; /* Places content above the background */
+    }
+    
+    /* Icon styling */
+    .tab i {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="logo.png" alt="World Mart">
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#" class="login-btn">Login</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Fulfill Your Shopping Dreams with World Mart</h1>
-                <p>Shop the latest products with us and experience smooth and fast deliveries at your convenience.</p>
-                <a href="#" class="btn-primary">Start Shopping</a>
-            </div>
-            <div class="hero-image">
-                <img src="hero-cart.png" alt="Shopping Cart">
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container features-grid">
-            <div class="features-info">
-                <h2>Features & Benefits</h2>
-                <p>Your go-to for rapid deliveries, enjoy your favorite products at the speed of light.</p>
-                <ul>
-                    <li><i class="fas fa-shipping-fast"></i> Delivery in 48 hours</li>
-                    <li><i class="fas fa-wallet"></i> Cash on Delivery</li>
-                    <li><i class="fas fa-exchange-alt"></i> 7-days easy return</li>
-                </ul>
-            </div>
-            <div class="features-image">
-                <img src="features-image.png" alt="Shopping Benefits">
-            </div>
-        </div>
-    </section>
-
-    <!-- Did You Know Section -->
-    <section class="did-you-know">
-        <div class="container">
-            <h2>Did You Know?</h2>
-            <p>At World Mart, we aim to deliver shopping satisfaction by providing a diverse collection of products and a seamless shopping experience.</p>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2>Testimonials</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-item">
-                    <img src="testimonial1.png" alt="Bob">
-                    <p>“World Mart has always been my go-to for fast deliveries and quality products. Highly recommended!”</p>
-                    <h4>Bob</h4>
-                </div>
-                <div class="testimonial-item">
-                    <img src="testimonial2.png" alt="Charlie">
-                    <p>“The customer service is top-notch and the ease of shopping is unmatched. Kudos to the World Mart team!”</p>
-                    <h4>Charlie</h4>
-                </div>
-                <div class="testimonial-item">
-                    <img src="testimonial3.png" alt="John">
-                    <p>“I've been using World Mart for years, and they never fail to deliver the best products at my doorstep.”</p>
-                    <h4>John</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h3>Is there a refund or return policy?</h3>
-                <p>Yes, we offer a 7-day return policy.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Do you offer any discounts or promotions?</h3>
-                <p>Yes, we regularly update our discounts and promotions section for the latest deals.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-info">
-                <h4>Contact Us</h4>
-                <p>Email: support@worldmart.com</p>
-                <p>Phone: +123 456 7890</p>
-            </div>
-            <div class="footer-socials">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <!-- Grid container for tabs -->
+  <div class="grid-container">
+    <!-- Each tab links to a different page with icon and title -->
+    <div class="tab"><a href="index_one.html"><i class="fas fa-home"></i>Landing Page 1</a></div>
+    <div class="tab"><a href="index_two.html"><i class="fas fa-globe"></i>Landing Page 2</a></div>
+    <div class="tab"><a href="index_three.html"><i class="fas fa-landmark"></i>Landing Page 3</a></div>
+    <div class="tab"><a href="index_four.html"><i class="fas fa-door-open"></i>Landing Page 4</a></div>
+  </div>
 </body>
 </html>

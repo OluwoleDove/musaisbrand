@@ -190,3 +190,149 @@ body {
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
 }
+
+/* Our Expertise Section */
+.our-expertise {
+    text-align: center;
+    padding: 2em 1em;
+    background-color: #002828;
+}
+
+.our-expertise h2 {
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.expertise-description {
+    font-size: 1em;
+    color: #A8D5D5;
+    margin-bottom: 1.5em;
+}
+
+.expertise-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.expertise-card {
+    background-color: #003D3D;
+    color: #FFFFFF;
+    padding: 1em 2em;
+    border-radius: 10px;
+    font-size: 1em;
+    transform: rotate(-5deg);
+}
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    padding: 2em 1em;
+    background-color: #003D3D;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.testimonials-description {
+    font-size: 1em;
+    color: #A8D5D5;
+    margin-bottom: 1.5em;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.testimonial-box {
+    background-color: #2A2A2A;
+    height: 150px;
+    border-radius: 5px;
+}
+
+/* Pricing Section */
+.pricing {
+    text-align: center;
+    padding: 2em 1em;
+    background-color: #002828;
+}
+
+.pricing h2 {
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 0.5em;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 1.5em;
+}
+
+.toggle-button {
+    background: none;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+}
+
+.toggle-button.active {
+    background-color: #F5B400;
+    color: #003D3D;
+}
+
+.discount-badge {
+    background-color: #F5B400;
+    color: #003D3D;
+    padding: 0.2em 0.5em;
+    font-size: 0.8em;
+    margin-left: 0.5em;
+}
+
+.pricing-plans {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background-color: #003D3D;
+    padding: 1em;
+    width: 200px;
+    border-radius: 8px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.featured {
+    background-color: #F5B400;
+    color: #003D3D;
+}
+
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.get-started {
+    background-color: #ffffff;
+    color: #003D3D;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    color: #A8D5D5;
+}

@@ -1,124 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Material Design Tab Grid with Backgrounds and Icons</title>
-  
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
-  <style>
-    /* Reset default margin and padding */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-    
-    /* Root grid container */
-    .grid-container {
-      display: grid;
-      height: 100vh;
-      gap: 30px;
-      padding: 20px;
-      width: 95%;
-      margin: 0 auto;
-    }
-    
-    /* Responsive grid layout */
-    @media (min-width: 768px) {
-      .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-      }
-    }
-    @media (max-width: 767px) {
-      .grid-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
-      }
-    }
-    
-    /* Individual tab styles */
-    .tab {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #fff;
-      font-size: 1.5em;
-      font-weight: bold;
-      border-radius: 8px;
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
-    
-    /* Background image styles for each tab */
-    .tab::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0.6; /* Background opacity */
-      transition: opacity 0.3s;
-    }
-    /* Different images for each tab */
-    .tab:nth-child(1)::before { background-image: url('image1.jpg'); }
-    .tab:nth-child(2)::before { background-image: url('image2.jpg'); }
-    .tab:nth-child(3)::before { background-image: url('image3.jpg'); }
-    .tab:nth-child(4)::before { background-image: url('image4.jpg'); }
-    
-    /* Different overlay colors for each tab */
-    .tab:nth-child(1) { background-color: #3b82f6; } /* Blue */
-    .tab:nth-child(2) { background-color: #f97316; } /* Orange */
-    .tab:nth-child(3) { background-color: #10b981; } /* Green */
-    .tab:nth-child(4) { background-color: #f43f5e; } /* Pink */
-    
-    /* Hover effects */
-    .tab:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-    .tab:hover::before {
-      opacity: 0.8;
-    }
-    
-    /* Link styling */
-    .tab a {
-      color: inherit;
-      text-decoration: none;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 1; /* Places content above the background */
-    }
-    
-    /* Icon styling */
-    .tab i {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musais Design</title>
+    <link rel="stylesheet" href="style/index.css">
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Grid container for tabs -->
-  <div class="grid-container">
-    <!-- Each tab links to a different page with icon and title -->
-    <div class="tab"><a href="index_one.html"><i class="fas fa-home"></i>Landing Page 1</a></div>
-    <div class="tab"><a href="index_two.html"><i class="fas fa-globe"></i>Landing Page 2</a></div>
-    <div class="tab"><a href="index_three.html"><i class="fas fa-landmark"></i>Landing Page 3</a></div>
-    <div class="tab"><a href="index_four.html"><i class="fas fa-door-open"></i>Landing Page 4</a></div>
-  </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Design. Develop. Deliver.<br><span>The Musais Way</span></h1>
+            <p class="subtitle">We Build Websites That Make Your <span class="highlight">Business Shine</span></p>
+            <button class="cta-button">Book a chat with Amena</button>
+            <p class="tagline">Best websites ever!</p>
+        </div>
+        <div class="projects-showcase">
+            <!-- Add image grid similar to the designs displayed -->
+        </div>
+    </section>
+
+    <!-- Why Clients Choose Us Section -->
+    <section class="why-choose-us">
+        <h2>Why Clients Choose Us?</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="responsive-icon.png" alt="Responsive Design">
+                <h3>Responsive Design</h3>
+                <p>Crafting websites that adjust smoothly across devices for user experience on desktops, tablets, and mobile.</p>
+            </div>
+            <div class="feature">
+                <img src="custom-development-icon.png" alt="Custom Development">
+                <h3>Custom Development</h3>
+                <p>Developing unique websites for each client, blending creativity and functionality to stand out.</p>
+            </div>
+            <div class="feature">
+                <img src="best-blogs-icon.png" alt="Best Blogs">
+                <h3>Best Blogs</h3>
+                <p>We write best blogs and articles for our clients; that's why people choose Musais.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- UI/UX Designs Section -->
+    <section class="ui-ux-designs">
+        <h2>UI/UX Designs</h2>
+        <div class="design-gallery">
+            <!-- Add images in a grid layout as shown in the design -->
+        </div>
+    </section>
+
 </body>
 </html>

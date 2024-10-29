@@ -1,0 +1,117 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    background: linear-gradient(180deg, #003D3D 0%, #002828 100%); /* Dark green gradient background */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4em 1em;
+    background: linear-gradient(180deg, #003D3D 0%, #002828 100%);
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5em;
+}
+
+.hero h1 span {
+    font-style: italic;
+    color: #F5B400; /* Accent color */
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #A8D5D5;
+    margin-bottom: 1em;
+}
+
+.subtitle .highlight {
+    position: relative;
+    color: #F5B400;
+}
+
+.subtitle .highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.1em;
+    width: 100%;
+    height: 3px;
+    background-color: #F5B400;
+}
+
+.cta-button {
+    background-color: #F5B400;
+    color: #003D3D;
+    border: none;
+    padding: 0.8em 2em;
+    font-size: 1em;
+    margin-top: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Why Clients Choose Us Section */
+.why-choose-us {
+    padding: 2em 1em;
+    text-align: center;
+    background-color: #002828;
+}
+
+.why-choose-us h2 {
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.why-choose-us h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #F5B400;
+    margin: 0.5em auto;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.feature {
+    max-width: 200px;
+}
+
+.feature h3 {
+    font-size: 1.2em;
+    color: #f5b400;
+    margin-top: 0.5em;
+}
+
+/* UI/UX Designs Section */
+.ui-ux-designs {
+    padding: 2em 1em;
+    background-color: #003d3d;
+    text-align: center;
+}
+
+.design-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+}

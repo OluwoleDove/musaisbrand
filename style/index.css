@@ -5,31 +5,40 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Como';
+    src: url('../fonts/Como_SemiBold.woff2') format('woff2'), /* For modern browsers */
+         url('../fonts/Como_SemiBold.woff') format('woff'),   /* For older browsers */
+         url('../fonts/Como_SemiBold.ttf') format('truetype'); /* For older browsers */
+    font-weight: 400; /* Adjust this if necessary */
+    font-style: normal;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Como';
     color: #ffffff;
-    background: linear-gradient(180deg, #003D3D 0%, #002828 100%); /* Dark green gradient background */
+    background-color: #047562;
+    background-image: linear-gradient(to right, #047562 25%, #015e4b 25%, #015e4b 50%, #047562 50%, #047562 75%, #015e4b 75%, #015e4b 100%);
+    background-size: 200px 100%;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 4em 1em;
-    background: linear-gradient(180deg, #003D3D 0%, #002828 100%);
-    color: #ffffff;
+    color: #fff6de;
 }
 
 .hero h1 {
     font-size: 2.5em;
     line-height: 1.2;
     font-weight: 600;
-    color: #ffffff;
+    color: #fff6de;
     margin-bottom: 0.5em;
 }
 
 .hero h1 span {
-    font-style: italic;
-    color: #F5B400; /* Accent color */
+    color: #fff6de; /* Accent color */
 }
 
 .subtitle {
@@ -40,7 +49,7 @@ body {
 
 .subtitle .highlight {
     position: relative;
-    color: #F5B400;
+    color: #fff6de;
 }
 
 .subtitle .highlight::after {
@@ -50,11 +59,11 @@ body {
     bottom: -0.1em;
     width: 100%;
     height: 3px;
-    background-color: #F5B400;
+    background-color: #fff6de;
 }
 
 .cta-button {
-    background-color: #F5B400;
+    background-color: #fff6de;
     color: #003D3D;
     border: none;
     padding: 0.8em 2em;
@@ -90,27 +99,9 @@ body {
 }
 
 /* Why Clients Choose Us Section */
-.why-choose-us {
-    padding: 2em 1em;
-    text-align: center;
-    background-color: #002828;
-}
 
-.why-choose-us h2 {
-    font-size: 2em;
-    color: #ffffff;
-    margin-bottom: 1em;
-    position: relative;
-}
 
-.why-choose-us h2::after {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 4px;
-    background-color: #F5B400;
-    margin: 0.5em auto;
-}
+/*//////////////////////////////////*/
 
 .features {
     display: flex;
@@ -131,7 +122,6 @@ body {
 /* UI/UX Designs Section */
 .ui-ux-designs {
     padding: 2em 1em;
-    background-color: #003d3d;
     text-align: center;
 }
 
@@ -200,6 +190,12 @@ body {
     height: auto; /* Maintain the aspect ratio */
     max-height: 100%; /* Prevent the image from exceeding the anchor's height */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.design-gallery a img:hover{
+    transform: scale(1.05);
+    background-color: #c0c0c0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Mobile responsiveness: one image per row */
@@ -394,83 +390,3 @@ body {
 }
 
 /* Pricing Section */
-.pricing {
-    text-align: center;
-    padding: 2em 1em;
-    background-color: #002828;
-}
-
-.pricing h2 {
-    font-size: 2em;
-    color: #ffffff;
-    margin-bottom: 0.5em;
-}
-
-.toggle-container {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-bottom: 1.5em;
-}
-
-.toggle-button {
-    background: none;
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    padding: 0.5em 1.5em;
-    cursor: pointer;
-}
-
-.toggle-button.active {
-    background-color: #F5B400;
-    color: #003D3D;
-}
-
-.discount-badge {
-    background-color: #F5B400;
-    color: #003D3D;
-    padding: 0.2em 0.5em;
-    font-size: 0.8em;
-    margin-left: 0.5em;
-}
-
-.pricing-plans {
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-    flex-wrap: wrap;
-}
-
-.plan {
-    background-color: #003D3D;
-    padding: 1em;
-    width: 200px;
-    border-radius: 8px;
-    text-align: center;
-    color: #ffffff;
-}
-
-.featured {
-    background-color: #F5B400;
-    color: #003D3D;
-}
-
-.price {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.get-started {
-    background-color: #ffffff;
-    color: #003D3D;
-    border: none;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.plan-features {
-    list-style: none;
-    padding: 0;
-    color: #A8D5D5;
-}

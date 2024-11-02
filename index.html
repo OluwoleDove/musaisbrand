@@ -7,49 +7,55 @@
     <link rel="stylesheet" href="style/index.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
 
-    <!-- Hero Section -->
+    <section class="icon">
+        <img src="assets/img/logo.png" alt="Musais Logo" class="logo-icon">
+        <span>Musais</span>
+    </section>
+    
     <section class="hero">
         <div class="hero-content">
             <h1>Design. Develop. Deliver.<br><span>The Musais Way</span></h1>
             <p class="subtitle">We Build Websites That Make Your <span class="highlight">Business Shine</span></p>
-            <button class="cta-button">Book a chat with Amena</button>
+            <button class="cta-button">Book a chat with Amena <i class="fas fa-comment"></i></button>
             <p class="tagline">Best websites ever!</p>
         </div>
         <div class="projects-showcase">
             <a href="index_one.html">
-                <img src="assets/img/ione_tab.png" alt="">
+                <img src="assets/img/ione_tab.png" alt="Project 1">
             </a>
             <a href="index_two.html">
-                <img src="assets/img/itwo_tab.png" alt="">
+                <img src="assets/img/itwo_tab.png" alt="Project 2">
             </a>
             <a href="index_three.html">
-                <img src="assets/img/ithree_tab.png" alt="">
+                <img src="assets/img/ithree_tab.png" alt="Project 3">
             </a>
             <a href="index_four.html">
-                <img src="assets/img/ifour_tab.png" alt="">
+                <img src="assets/img/ifour_tab.png" alt="Project 4">
             </a>
         </div>
     </section>
+    
 
     <!-- Why Clients Choose Us Section -->
     <section class="why-choose-us">
         <h2>Why Clients Choose Us?</h2>
         <div class="features">
             <div class="feature">
-                <img src="responsive-icon.png" alt="Responsive Design">
+                <i class="fas fa-tablet-alt"></i>
                 <h3>Responsive Design</h3>
                 <p>Crafting websites that adjust smoothly across devices for user experience on desktops, tablets, and mobile.</p>
             </div>
             <div class="feature">
-                <img src="custom-development-icon.png" alt="Custom Development">
+                <i class="fas fa-desktop"></i>
                 <h3>Custom Development</h3>
                 <p>Developing unique websites for each client, blending creativity and functionality to stand out.</p>
             </div>
             <div class="feature">
-                <img src="best-blogs-icon.png" alt="Best Blogs">
+                <i class="fas fa-edit"></i>
                 <h3>Best Blogs</h3>
                 <p>We write best blogs and articles for our clients; that's why people choose Musais.</p>
             </div>
@@ -76,7 +82,7 @@
     <!-- Our Expertise Section -->
     <section class="our-expertise">
         <h2>Our Expertise</h2>
-        <p class="expertise-description">Our blend of creativity and technical finesse ensures bespoke solutions that elevate <span class="highlight">brands</span> and captivate audiences, leaving an unforgettable imprint on the design landscape.</p>
+        <p class="expertise-description">Our blend of creativity and technical finesse ensures bespoke solutions<br />that elevate <span class="highlight">brands</span> and captivate audiences, leaving an unforgettable<br />imprint on the design landscape.<br /></p>
         <div class="expertise-cards">
             <div class="expertise-card" style="animation-delay: 0s;">UI/UX Designs</div>
             <div class="expertise-card" style="animation-delay: 0.2s;">Web Development</div>
@@ -104,45 +110,79 @@
     </section>
 
     <!-- Pricing Section -->
-    <section class="pricing">
-        <h2>Pick the Right Plan for You</h2>
-        <div class="toggle-container">
-            <button class="toggle-button active">Monthly</button>
-            <button class="toggle-button">Yearly</button>
+    <section class="pricing-section">
+        <div class="toggle-switch">
+            <button class="toggle active">Monthly</button>
+            <button class="toggle">Yearly</button>
+            <span class="discount">25% Off</span>
         </div>
-        <div class="pricing-plans">
-            <div class="plan">
-                <p class="plan-title">Basic Plan</p>
-                <p class="price">$19/mo</p>
-                <button class="get-started">Get Started</button>
-                <ul class="plan-features">
-                    <li>3 Landing Pages</li>
-                    <li>Responsive Design</li>
-                    <li>Email Support</li>
+    
+        <h2>Pick the Right Plan for You</h2>
+    
+        <div class="plans">
+            <!-- Left Plan -->
+            <div class="plan-card">
+                <h3>XXXXX</h3>
+                <p class="price">XXXX</p>
+                <button class="btn">Get Started Now</button>
+                <ul>
+                    <li><i class="fas fa-check"></i> 5 Landing Pages</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
                 </ul>
             </div>
-            <div class="plan featured">
-                <p class="plan-title">Standard Plan</p>
-                <p class="price">$49/mo</p>
-                <button class="get-started">Get Started</button>
-                <ul class="plan-features">
-                    <li>5 Landing Pages</li>
-                    <li>Custom Domain</li>
-                    <li>Priority Support</li>
+    
+            <!-- Center Plan (Default Highlighted) -->
+            <div class="plan-card highlighted">
+                <h3>XXXX</h3>
+                <p class="price">$999/mo</p>
+                <button class="btn">Get Started Now</button>
+                <ul>
+                    <li><i class="fas fa-check"></i> 5 Landing Pages</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
                 </ul>
             </div>
-            <div class="plan">
-                <p class="plan-title">Premium Plan</p>
-                <p class="price">$99/mo</p>
-                <button class="get-started">Get Started</button>
-                <ul class="plan-features">
-                    <li>Unlimited Pages</li>
-                    <li>Advanced Analytics</li>
-                    <li>24/7 Support</li>
+    
+            <!-- Right Plan -->
+            <div class="plan-card">
+                <h3>XXXXX</h3>
+                <p class="price">XXXX</p>
+                <button class="btn">Get Started Now</button>
+                <ul>
+                    <li><i class="fas fa-check"></i> 5 Landing Pages</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
+                    <li><i class="fas fa-check"></i> XXXXXXXX</li>
                 </ul>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo-section">
+                <img src="assets/img/logo.png" class="logo-icon"/>
+                <span class="brand-name">Musais</span>
+            </div>
+            <div class="social-icons">
+                <a href="#" aria-label="X"><i class="fab fa-x"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

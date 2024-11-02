@@ -22,55 +22,68 @@ body {
     background-size: 200px 100%;
 }
 
+.icon {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.icon span{
+    padding: 8px 10px;
+    font-size: 20px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+}
+
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 4em 1em;
-    color: #fff6de;
+    padding: 50px 20px;
 }
 
-.hero h1 {
-    font-size: 2.5em;
+.hero-content h1 {
+    font-size: 5em;
+    font-weight: bold;
     line-height: 1.2;
-    font-weight: 600;
-    color: #fff6de;
-    margin-bottom: 0.5em;
+    margin: 0;
+    color: #fff;
 }
 
-.hero h1 span {
-    color: #fff6de; /* Accent color */
+.hero-content h1 span {
+    display: block;
+    font-weight: bold;
 }
 
 .subtitle {
     font-size: 1.2em;
-    color: #A8D5D5;
-    margin-bottom: 1em;
+    margin-top: 20px;
 }
 
-.subtitle .highlight {
-    position: relative;
-    color: #fff6de;
-}
-
-.subtitle .highlight::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -0.1em;
-    width: 100%;
-    height: 3px;
-    background-color: #fff6de;
+.highlight {
+    color: #e7f0f2; /* Gold color for highlight */
+    font-weight: 800;
 }
 
 .cta-button {
-    background-color: #fff6de;
-    color: #003D3D;
+    background-color: #ffffff;
+    color: #0c3b3d;
     border: none;
-    padding: 0.8em 2em;
+    padding: 15px 30px;
     font-size: 1em;
-    margin-top: 1em;
+    border-radius: 25px;
+    margin-top: 30px;
     cursor: pointer;
-    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tagline {
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #e7f0f2;
 }
 
 .projects-showcase {
@@ -99,25 +112,88 @@ body {
 }
 
 /* Why Clients Choose Us Section */
+.why-choose-us {
+    background-color: #0f3b3d; /* Dark green background as in the image */
+    padding: 2rem;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 30px;
+    border: 2px solid #eae1c1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    margin: 0 auto;
+}
 
+.why-choose-us h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fdfdfd;
+    font-weight: bold;
+    position: relative;
+}
 
-/*//////////////////////////////////*/
+.why-choose-us h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background-color: #fdfdfd;
+    margin: 0.5rem auto;
+}
 
 .features {
     display: flex;
     justify-content: center;
-    gap: 2em;
+    gap: 2rem;
+    flex-wrap: wrap; /* Make it wrap for mobile responsiveness */
 }
 
 .feature {
-    max-width: 200px;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 31%;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .feature h3 {
-    font-size: 1.2em;
-    color: #f5b400;
+    font-size: 1.8em;
+    color: #eae1c1;
     margin-top: 0.5em;
 }
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #033312;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #eae1c1;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #c3d6d6;
+    line-height: 1.5;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+/*//////////////////////////////////*/
 
 /* UI/UX Designs Section */
 .ui-ux-designs {
@@ -218,15 +294,16 @@ body {
     background-color: #002828;
 }
 
-.our-expertise h2 {
-    font-size: 2em;
+.our-expertise h2, .ui-ux-designs h2 {
+    font-size: 3em;
     color: #ffffff;
+    margin-bottom: 0.5em;
 }
 
 .expertise-description {
-    font-size: 1em;
+    font-size: 1.5em;
     color: #A8D5D5;
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
 }
 
 .expertise-cards {
@@ -316,7 +393,7 @@ body {
 }
 
 .testimonials h2 {
-    font-size: 2em;
+    font-size: 3em;
     color: #ffffff;
 }
 
@@ -390,3 +467,222 @@ body {
 }
 
 /* Pricing Section */
+.pricing-section {
+    text-align: center;
+    padding: 2rem;
+    color: #ffffff;
+}
+
+.toggle-switch {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.toggle {
+    background-color: #1a5252;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.toggle.active {
+    background-color: #24a19c;
+}
+
+.discount {
+    background-color: #ff5a5a;
+    color: #ffffff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    position: absolute;
+    top: -10px;
+    right: -50px;
+}
+
+.pricing-section h2 {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.pricing-section h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 0.5rem auto;
+}
+
+.plans {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background-color: #1a5252;
+    padding: 3rem;
+    border-radius: 10px;
+    width: 25%;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+}
+
+/* Default highlight for the center card */
+.plan-card.highlighted {
+    background-color: #1f6d6e;
+    transform: scale(1.1);
+}
+
+/* De-emphasize non-hovered cards */
+.plans:hover .plan-card:not(:hover) {
+    transform: scale(0.95);
+    background-color: #1a5252;
+}
+
+/* Emphasize only the hovered card */
+.plan-card:hover {
+    transform: scale(1.1);
+    background-color: #1f6d6e;
+}
+
+.plan-card h3 {
+    font-size: 2rem;
+    color: #e7f0f2;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    color: #b5f3f0;
+}
+
+.btn {
+    background-color: #ffffff;
+    color: #1a5252;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e6e6e6;
+}
+
+ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+ul li {
+    font-size: 0.9rem;
+    color: #c3d6d6;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+ul li i {
+    color: #33ff77;
+    margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+.footer {
+    background-color: #0b2403; /* Dark background */
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+    height: 100px;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#4a4a4a 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    transform: translateX(-50%);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 10px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-name {
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.social-icons a {
+    margin-left: 15px;
+    color: #ffffff;
+    font-size: 1.2em;
+    transition: transform 0.2s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo-section {
+        margin-bottom: 15px;
+    }
+
+    .social-icons a {
+        margin-left: 10px;
+    }
+}

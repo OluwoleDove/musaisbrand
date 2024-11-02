@@ -1,0 +1,277 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: #ffedd5;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #4a2b29;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #d2a679;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact-btn {
+    background-color: #d2a679;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #4a2b29;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('background.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.explore-btn {
+    background-color: #d2a679;
+    padding: 0.8rem 2rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+    background: #ffedd5;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature i {
+    font-size: 2rem;
+    color: #4a2b29;
+}
+
+.feature h3 {
+    color: #4a2b29;
+    margin-top: 0.5rem;
+}
+
+.feature p {
+    color: #4a2b29;
+}
+
+/* Gallery Section */
+.gallery {
+    text-align: center;
+    background: #ffe8d6;
+    padding: 2rem;
+}
+
+.gallery h2 {
+    color: #4a2b29;
+    margin-bottom: 1rem;
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    background-color: #d2a679;
+    color: #4a2b29;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Deal Section */
+.deal {
+    background-color: #fff3e0;
+    padding: 2rem;
+    text-align: center;
+}
+
+.deal h2 {
+    color: #4a2b29;
+    font-size: 2rem;
+}
+
+.deal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.deal-info h3 {
+    color: #4a2b29;
+}
+
+.deal-info p {
+    color: #4a2b29;
+}
+
+.shop-btn {
+    background-color: #d2a679;
+    border: none;
+    color: #4a2b29;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #ffe8d6;
+    text-align: center;
+    padding: 2rem;
+}
+
+.schedule-btn {
+    background-color: #d2a679;
+    border: none;
+    color: #4a2b29;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+}
+
+/* Footer */
+/* Footer Styles */
+.footer {
+    background: linear-gradient(to right, #f8e4d9, #f7dfd3);
+    padding: 2rem 1rem;
+    color: #5c4636;
+    font-family: 'Como', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    flex: 1 1 200px;
+    text-align: left;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.footer-company {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    color: #5c4636;
+    margin-top: 0.2rem;
+}
+
+.footer-links {
+    display: flex;
+    flex: 2 1 600px;
+    justify-content: space-around;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.footer-column h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #5c4636;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #d2a679;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #5c4636;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #d2a679;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #5c4636;
+}

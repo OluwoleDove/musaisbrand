@@ -593,6 +593,14 @@ body {
     background: linear-gradient(90deg, #0f2928, #030909, #0f2928);
 }
 
+/* Styles within the hovered .plan-card */
+.plan-card:hover .btn {
+    background-color: #fff0e1;
+    color: #1a5252;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
 /* Highlight button styles */
 .plan-card h3 {
     font-size: 2rem;

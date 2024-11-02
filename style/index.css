@@ -15,11 +15,42 @@
 }
 
 body {
-    font-family: 'Como';
-    color: #ffffff;
+    font-family: 'Como', sans-serif;
+    color: #fff0e1;
     background-color: #047562;
-    background-image: linear-gradient(to right, #047562 25%, #015e4b 25%, #015e4b 50%, #047562 50%, #047562 75%, #015e4b 75%, #015e4b 100%);
+
+    /* Alternating dark and light green bands */
+    background-image: repeating-linear-gradient(
+        to right,
+        #073130 0,
+        #073130 25%,
+        #0d3b3b 25%,
+        #0d3b3b 50%
+    );
     background-size: 200px 100%;
+
+    /* Left border shadow */
+    box-shadow: -5px 0 10px #011313;
+    margin: 0; /* To remove any default body margin */
+}
+
+/* underline img styling */
+.hero_img {
+    max-width: 300px;
+}
+
+.why_us_img {
+    max-width: 600px;
+}
+
+.uiux_img, .expertise_img, .testimonial_img {
+    max-width: 400px;
+    rotate: 2deg;
+}
+
+.pricing_img{
+    min-width: 800px;
+    rotate: 2deg;
 }
 
 .icon {
@@ -68,7 +99,7 @@ body {
 }
 
 .cta-button {
-    background-color: #ffffff;
+    background-color: #fff0e1;
     color: #0c3b3d;
     border: none;
     padding: 15px 30px;
@@ -116,29 +147,12 @@ body {
     background-color: #0f3b3d; /* Dark green background as in the image */
     padding: 2rem;
     text-align: center;
-    color: #ffffff;
+    color: #fff0e1;
     border-radius: 30px;
-    border: 2px solid #eae1c1;
+    border: 2px solid #fff0e1;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     width: 90%;
     margin: 0 auto;
-}
-
-.why-choose-us h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: #fdfdfd;
-    font-weight: bold;
-    position: relative;
-}
-
-.why-choose-us h2::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 2px;
-    background-color: #fdfdfd;
-    margin: 0.5rem auto;
 }
 
 .features {
@@ -158,7 +172,7 @@ body {
 
 .feature h3 {
     font-size: 1.8em;
-    color: #eae1c1;
+    color: #fff0e1;
     margin-top: 0.5em;
 }
 
@@ -172,7 +186,7 @@ body {
     color: #033312;
     padding: 15px;
     border-radius: 15px;
-    background-color: #eae1c1;
+    background-color: #fff0e1;
 }
 
 .feature p {
@@ -286,18 +300,19 @@ body {
     }
 }
 
-
+.pricing-section, .testimonials, .our-expertise, .footer {
+    background: linear-gradient(180deg, #0f2928, #030909, #0f2928);
+    padding: 20px;
+}
 /* Our Expertise Section */
 .our-expertise {
     text-align: center;
-    padding: 2em 1em;
-    background-color: #002828;
+    padding: 2em 0.2em;
 }
 
-.our-expertise h2, .ui-ux-designs h2 {
-    font-size: 3em;
-    color: #ffffff;
-    margin-bottom: 0.5em;
+.why-choose-us h2, .our-expertise h2, .ui-ux-designs h2, .testimonials h2, .pricing-section h2 {
+    font-size: 4em;
+    color: #fff0e1;
 }
 
 .expertise-description {
@@ -309,70 +324,76 @@ body {
 .expertise-cards {
     position: relative;
     width: 90%;
-    height: 350px;
+    height: 500px;
     display: flex;
     margin: 0 auto;
 }
 
 .expertise-card {
     position: absolute;
-    width: 300px;
-    height: 200px;
+    width: 350px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #012008;
+    background: linear-gradient(180deg, #030909, #0f2928, #030909);
     border: 1px solid #e1cf9b;
-    color: #ffffff;
+    color: #fff0e1;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 1.5em;
     font-weight: bold;
     text-align: center;
     animation: bounce 3s ease-in-out infinite;
 }
 
-/* Precise positioning, angles, and overlapping for each card */
+/* Positioning, angles, and overlapping for each card */
 .expertise-card:nth-child(1) {
-    top: 10px;
-    left: 120px;
-    transform: rotate(-7deg);
-    --rotate-angle: -7deg;
+    top: 5px;
+    left: 90px;
+    transform: rotate(-4deg);
+    --rotate-angle: -4deg;
+    z-index: 2; /* Bring this card forward */
 }
 
 .expertise-card:nth-child(2) {
     top: 0px;
-    left: 380px;
+    left: 440px;
     transform: rotate(5deg);
     --rotate-angle: 5deg;
+    z-index: 1; /* Default */
 }
 
 .expertise-card:nth-child(3) {
-    top: 10px;
-    right: 220px;
+    right: 90px;
     transform: rotate(-12deg);
     --rotate-angle: -12deg;
+    z-index: 3; /* Bring this card forward, above Child 1 */
 }
 
 .expertise-card:nth-child(4) {
-    top: 120px;
-    left: 150px;
+    top: 230px;
+    left: 120px;
     transform: rotate(-15deg);
     --rotate-angle: -15deg;
+    z-index: 4; /* Bring this card in front of all others */
 }
 
 .expertise-card:nth-child(5) {
-    top: 130px;
-    left: 320px;
+    top: 230px;
+    left: 440px;
     transform: rotate(-4deg);
     --rotate-angle: -4deg;
+    z-index: 1; /* Default */
 }
 
 .expertise-card:nth-child(6) {
-    top: 120px;
-    right: 250px;
+    top: 230px;
+    right: 90px;
     transform: rotate(8deg);
     --rotate-angle: 8deg;
+    z-index: 1; /* Default */
 }
+
 
 /* Smooth bounce animation that retains the initial rotation */
 @keyframes bounce {
@@ -389,12 +410,6 @@ body {
 .testimonials {
     text-align: center;
     padding: 2em 1em;
-    background-color: #003D3D;
-}
-
-.testimonials h2 {
-    font-size: 3em;
-    color: #ffffff;
 }
 
 .testimonials-description {
@@ -470,25 +485,40 @@ body {
 .pricing-section {
     text-align: center;
     padding: 2rem;
-    color: #ffffff;
+    color: #fff0e1;
+}
+
+.pricing-section::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#fff0e1 1px, transparent 1px);
+    background-size: 25px 25px;
+    opacity: 0.6;
+    transform: translateX(-50%);
 }
 
 .toggle-switch {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    justify-content: left;
+    gap: 0.5rem;
+    margin: 0 auto;
     position: relative;
+    border-radius: 30px;
+    width: 300px;
+    padding: 5px;
+    border: 1px solid #fff0e1;
 }
 
 .toggle {
     background-color: #1a5252;
-    color: #ffffff;
+    color: #fff0e1;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 15px;
     cursor: pointer;
-    font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 
@@ -496,29 +526,27 @@ body {
     background-color: #24a19c;
 }
 
+.toggle-switch button {
+    padding: 5px 50px;
+    font-size: 0.8em;
+}
+
 .discount {
-    background-color: #ff5a5a;
-    color: #ffffff;
+    background-color: #fc2020;
+    color: #fff0e1;
     padding: 0.2rem 0.5rem;
     border-radius: 5px;
     font-size: 0.8rem;
     position: absolute;
-    top: -10px;
-    right: -50px;
+    top: -15px;
+    right: -20px;
+    width: 70px;
+    padding: 5px;
+    rotate: 30deg;
 }
 
 .pricing-section h2 {
-    font-size: 3rem;
     margin: 1rem 0;
-}
-
-.pricing-section h2::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 2px;
-    background-color: #ffffff;
-    margin: 0.5rem auto;
 }
 
 .plans {
@@ -529,7 +557,7 @@ body {
 }
 
 .plan-card {
-    background-color: #1a5252;
+    background: linear-gradient(90deg, #030909, #0f2928, #030909);
     padding: 3rem;
     border-radius: 10px;
     width: 25%;
@@ -542,22 +570,30 @@ body {
 
 /* Default highlight for the center card */
 .plan-card.highlighted {
-    background-color: #1f6d6e;
+    background: linear-gradient(90deg, #0f2928, #030909, #0f2928);
     transform: scale(1.1);
 }
 
-/* De-emphasize non-hovered cards */
+/* De-emphasize non-hovered cards and reset highlighted button style */
 .plans:hover .plan-card:not(:hover) {
     transform: scale(0.95);
+    background: linear-gradient(90deg, #030909, #0f2928, #030909);
+}
+
+/* Revert .highlighted .btn style when another card is hovered */
+.plans:hover .plan-card:not(:hover) .btn {
     background-color: #1a5252;
+    color: #fff0e1;
+    border-radius: 8px;
 }
 
 /* Emphasize only the hovered card */
 .plan-card:hover {
     transform: scale(1.1);
-    background-color: #1f6d6e;
+    background: linear-gradient(90deg, #0f2928, #030909, #0f2928);
 }
 
+/* Highlight button styles */
 .plan-card h3 {
     font-size: 2rem;
     color: #e7f0f2;
@@ -570,19 +606,23 @@ body {
     color: #b5f3f0;
 }
 
+/* Default button styling */
 .btn {
-    background-color: #ffffff;
-    color: #1a5252;
-    padding: 0.5rem 1.2rem;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
+    background-color: #1a5252;
+    color: #fff0e1;
+    padding: 0.5rem 3.5rem;
+    border: 1px solid #fff0e1;
+    border-radius: 8px;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #e6e6e6;
+/* Highlighted button style and hover effect */
+.highlighted .btn, .btn:hover {
+    background-color: #fff0e1;
+    color: #1a5252;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 ul {
@@ -618,7 +658,6 @@ ul li i {
 
 
 .footer {
-    background-color: #0b2403; /* Dark background */
     padding: 20px 0;
     position: relative;
     overflow: hidden;
@@ -632,9 +671,9 @@ ul li i {
     left: 50%;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(#4a4a4a 1px, transparent 1px);
-    background-size: 20px 20px;
-    opacity: 0.3;
+    background-image: radial-gradient(#fff0e1 1px, transparent 1px);
+    background-size: 25px 25px;
+    opacity: 0.6;
     transform: translateX(-50%);
 }
 
@@ -654,14 +693,14 @@ ul li i {
 }
 
 .brand-name {
-    color: #ffffff;
+    color: #fff0e1;
     font-size: 1.2em;
     font-weight: bold;
 }
 
 .social-icons a {
     margin-left: 15px;
-    color: #ffffff;
+    color: #fff0e1;
     font-size: 1.2em;
     transition: transform 0.2s;
 }

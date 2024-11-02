@@ -331,7 +331,7 @@ body {
 
 .expertise-card {
     position: absolute;
-    width: 350px;
+    width: 28.5%;
     height: 250px;
     display: flex;
     justify-content: center;
@@ -339,7 +339,7 @@ body {
     background: linear-gradient(180deg, #030909, #0f2928, #030909);
     border: 1px solid #e1cf9b;
     color: #fff0e1;
-    border-radius: 10px;
+    border-radius: 15px;
     font-size: 1.5em;
     font-weight: bold;
     text-align: center;
@@ -349,22 +349,21 @@ body {
 /* Positioning, angles, and overlapping for each card */
 .expertise-card:nth-child(1) {
     top: 5px;
-    left: 90px;
-    transform: rotate(-4deg);
-    --rotate-angle: -4deg;
+    left: 9%;
+    transform: rotate(-3deg);
+    --rotate-angle: -3deg;
     z-index: 2; /* Bring this card forward */
 }
 
 .expertise-card:nth-child(2) {
-    top: 0px;
-    left: 440px;
+    left: 38%;
     transform: rotate(5deg);
     --rotate-angle: 5deg;
     z-index: 1; /* Default */
 }
 
 .expertise-card:nth-child(3) {
-    right: 90px;
+    right: 9%;
     transform: rotate(-12deg);
     --rotate-angle: -12deg;
     z-index: 3; /* Bring this card forward, above Child 1 */
@@ -372,7 +371,7 @@ body {
 
 .expertise-card:nth-child(4) {
     top: 230px;
-    left: 120px;
+    left: 12%;
     transform: rotate(-15deg);
     --rotate-angle: -15deg;
     z-index: 4; /* Bring this card in front of all others */
@@ -380,7 +379,7 @@ body {
 
 .expertise-card:nth-child(5) {
     top: 230px;
-    left: 440px;
+    left: 38%;
     transform: rotate(-4deg);
     --rotate-angle: -4deg;
     z-index: 1; /* Default */
@@ -388,7 +387,7 @@ body {
 
 .expertise-card:nth-child(6) {
     top: 230px;
-    right: 90px;
+    right: 9%;
     transform: rotate(8deg);
     --rotate-angle: 8deg;
     z-index: 1; /* Default */

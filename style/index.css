@@ -36,20 +36,20 @@ body {
 
 /* underline img styling */
 .hero_img {
-    max-width: 300px;
+    max-width: 23%;
 }
 
 .why_us_img {
-    max-width: 600px;
+    max-width: 47%;
 }
 
 .uiux_img, .expertise_img, .testimonial_img {
-    max-width: 400px;
+    max-width: 30%;
     rotate: 2deg;
 }
 
 .pricing_img{
-    min-width: 800px;
+    min-width: 62%;
     rotate: 2deg;
 }
 
@@ -87,7 +87,21 @@ body {
     display: block;
     font-weight: bold;
 }
+.fa-star{
+    font-size: 20px;
+}
 
+.fa-bahai{
+    position: absolute;
+    margin-bottom: -20px;
+    font-size: 40px;
+}
+
+.fa-crown{
+    color: goldenrod;
+    position: absolute;
+    top: 355px;
+}
 .subtitle {
     font-size: 1.2em;
     margin-top: 20px;
@@ -111,10 +125,22 @@ body {
 }
 
 .tagline {
-    margin-bottom: 20px;
+    margin: 5px;
+    margin-bottom: 60px;
     font-style: italic;
     font-size: 0.9em;
+    opacity: 0.7;
     color: #e7f0f2;
+}
+
+.viewall{
+    float: right;
+    padding: 0 30px;
+    margin-top: -30px;
+}
+
+.viewall span {
+    text-decoration: underline;
 }
 
 .projects-showcase {
@@ -195,18 +221,6 @@ body {
     line-height: 1.5;
 }
 
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .features {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature {
-        width: 100%;
-        max-width: 300px;
-    }
-}
 /*//////////////////////////////////*/
 
 /* UI/UX Designs Section */
@@ -286,18 +300,6 @@ body {
     transform: scale(1.05);
     background-color: #c0c0c0;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Mobile responsiveness: one image per row */
-@media screen and (max-width: 767px) {
-    .design-gallery {
-        grid-template-columns: 1fr; /* 1 column for mobile devices */
-        grid-template-rows: auto; /* Allow rows to adjust to content */
-        height: 50vh
-    }
-    .design-gallery img {
-        height: auto; /* Ensure images maintain aspect ratio */
-    }
 }
 
 .pricing-section, .testimonials, .our-expertise, .footer {
@@ -569,7 +571,7 @@ body {
 
 /* Default highlight for the center card */
 .plan-card.highlighted {
-    background: linear-gradient(90deg, #0f2928, #030909, #0f2928);
+    background: linear-gradient(90deg, #2a7976, #125a5a, #2a7976);
     transform: scale(1.1);
 }
 
@@ -589,7 +591,7 @@ body {
 /* Emphasize only the hovered card */
 .plan-card:hover {
     transform: scale(1.1);
-    background: linear-gradient(90deg, #0f2928, #030909, #0f2928);
+    background: linear-gradient(90deg, #2a7976, #125a5a, #2a7976);
 }
 
 /* Styles within the hovered .plan-card */
@@ -601,8 +603,8 @@ body {
 }
 
 /* Highlight button styles */
-.plan-card h3 {
-    font-size: 2rem;
+.plan-card h5 {
+    font-size: 1rem;
     color: #e7f0f2;
     margin-bottom: 0.5rem;
 }
@@ -610,7 +612,6 @@ body {
 .price {
     font-size: 2rem;
     margin: 0.5rem 0;
-    color: #b5f3f0;
 }
 
 /* Default button styling */
@@ -632,6 +633,10 @@ body {
     cursor: pointer;
 }
 
+.highlighted h5 {
+ color: #b5f3f0;
+}
+
 ul {
     list-style: none;
     margin-top: 1rem;
@@ -649,20 +654,6 @@ ul li i {
     color: #33ff77;
     margin-right: 0.5rem;
 }
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .plans {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .plan-card {
-        width: 100%;
-        max-width: 300px;
-    }
-}
-
 
 .footer {
     padding: 20px 0;
@@ -716,8 +707,64 @@ ul li i {
     transform: scale(1.1);
 }
 
-/* Mobile responsiveness */
-@media (max-width: 600px) {
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .fa-crown{
+        top: 765px;
+    }
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .design-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: 50vh
+    }
+    .design-gallery img {
+        height: auto;
+    }
+
+    .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .projects-showcase a,
+    .design-gallery a,
+    .expertise-card,
+    .testimonial-item {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .design-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    .expertise-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .footer-content {
         flex-direction: column;
         align-items: center;

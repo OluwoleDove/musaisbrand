@@ -125,7 +125,7 @@ body {
 }
 
 .tagline {
-    margin: 5px;
+    margin-top: 20px;
     margin-bottom: 60px;
     font-style: italic;
     font-size: 0.9em;
@@ -708,74 +708,115 @@ ul li i {
 }
 
 /* Responsive Styling */
+/* Responsive Styling */
 @media screen and (max-width: 768px) {
-    .fa-crown{
-        top: 765px;
+    .hero-content h1 {
+        font-size: 3em;
+        font-weight: bold;
+        line-height: 1.2;
+        
     }
-    .features {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature {
-        width: 100%;
-        max-width: 300px;
-    }
-
     .design-gallery {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        height: 50vh
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        width: 100%; 
+        height: auto;
+        padding: 0; 
     }
+
+    .design-gallery a {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
     .design-gallery img {
+        width: 100%;
         height: auto;
     }
 
-    .plans {
+    .card-testimonials {
+        display: flex;
         flex-direction: column;
-        align-items: center;
-    }
-
-    .plan-card {
         width: 100%;
-        max-width: 300px;
+        height: auto;
+        padding: 0;
+        gap: 10px;
     }
 
-    .projects-showcase a,
-    .design-gallery a,
-    .expertise-card,
-    .testimonial-item {
+    .testimonial {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust styles for specific items if necessary */
+    .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8 {
         width: 100%;
         max-width: 100%;
     }
-
-    .design-gallery {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        height: auto;
-    }
-
+    
     .expertise-cards {
+        position: relative;
         flex-direction: column;
-        align-items: center;
+        width: 80%;
+        margin: 0 auto;
     }
 
-    .testimonials {
-        flex-direction: column;
-        align-items: center;
+    .expertise-card:nth-child(1),
+    .expertise-card:nth-child(2),
+    .expertise-card:nth-child(3),
+    .expertise-card:nth-child(4),
+    .expertise-card:nth-child(5),
+    .expertise-card:nth-child(6) {
+        transform: rotate(0deg);
+        --rotate-angle: 0deg;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin-bottom: 300px;
+    }
+    .expertise-card:nth-child(2) { top: 30; }
+    
+    
+    /* Additional styles for icons and other components, if needed */
+    .fa-crown {
+        top: 530px; /* Adjusted position as per your original code */
     }
 
-    .footer-content {
+    .features, .plans, .expertise-cards, .testimonials, .footer-content {
+        flex-direction: column; /* Stack features, plans, etc. */
+        align-items: center; /* Center items */
+    }
+
+    .feature, .plan-card {
+        width: 100%; /* Full width for features and plan cards */
+        max-width: 300px; /* Optional: max width */
+    }
+
+    .projects-showcase {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+    }
+
+    .projects-showcase a, .expertise-card, .testimonial-item {
+        width: 100%; /* Full width for showcase and testimonials */
+        max-width: 100%; /* Ensure it doesn't exceed the container */
     }
 
     .logo-section {
-        margin-bottom: 15px;
+        margin-bottom: 15px; /* Margin for logo */
     }
 
     .social-icons a {
-        margin-left: 10px;
+        margin-left: 10px; /* Space between social icons */
+    }
+
+    .pricing_img{
+        max-width: 75%;
+    }
+    .why-choose-us h2, .our-expertise h2, .ui-ux-designs h2, .testimonials h2, .pricing-section h2 {
+        font-size: 2.5em;
     }
 }

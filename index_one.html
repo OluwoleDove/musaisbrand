@@ -3,127 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Mart</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>World Mart - Fulfill Your Shopping Dreams</title>
     <link rel="stylesheet" href="style/index_one.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="logo.png" alt="World Mart">
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#" class="login-btn">Login</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"> <img src="logo.png" alt="World Mart Logo"> </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#"><i class="fas fa-search"></i></a></li>
+            <li><a href="#" class="login-btn">Login</a></li>
+        </ul>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Fulfill Your Shopping Dreams with World Mart</h1>
-                <p>Shop the latest products with us and experience smooth and fast deliveries at your convenience.</p>
-                <a href="#" class="btn-primary">Start Shopping</a>
-            </div>
-            <div class="hero-image">
-                <img src="hero-cart.png" alt="Shopping Cart">
-            </div>
+        <div class="hero-content">
+            <h1>Fulfill Your Shopping Dreams with World Mart</h1>
+            <p>Your one-stop destination for an exceptional shopping experience with the speed of light.</p>
+            <button class="cta-btn">Start Shopping</button>
+            <button class="cta-btn-alt">Learn More</button>
+        </div>
+        <div class="hero-image">
+            <img src="shopping-cart.png" alt="Shopping Cart">
+            <img src="shopping-character.png" alt="Shopping Character">
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container features-grid">
-            <div class="features-info">
-                <h2>Features & Benefits</h2>
-                <p>Your go-to for rapid deliveries, enjoy your favorite products at the speed of light.</p>
-                <ul>
-                    <li><i class="fas fa-shipping-fast"></i> Delivery in 48 hours</li>
-                    <li><i class="fas fa-wallet"></i> Cash on Delivery</li>
-                    <li><i class="fas fa-exchange-alt"></i> 7-days easy return</li>
-                </ul>
-            </div>
-            <div class="features-image">
-                <img src="features-image.png" alt="Shopping Benefits">
-            </div>
+    <!-- Features & Benefits Section -->
+    <section class="features-section">
+        <h2>Features & <span>Benefits</span></h2>
+        <p>Your go-to for rapid delivery, ensuring your satisfaction at the speed of light.</p>
+        <ul>
+            <li>🚚 Get your delivery in 48 hours</li>
+            <li>💵 Cash On Delivery available</li>
+            <li>🔄 7-days easy return</li>
+        </ul>
+        <div class="delivery-image">
+            <img src="delivery-guy.png" alt="Delivery Guy">
         </div>
     </section>
+
 
     <!-- Did You Know Section -->
     <section class="did-you-know">
-        <div class="container">
-            <h2>Did You Know?</h2>
-            <p>At World Mart, we aim to deliver shopping satisfaction by providing a diverse collection of products and a seamless shopping experience.</p>
-        </div>
+        <h2>Did You Know?</h2>
+        <p>At <strong>World Mart</strong>, we aim to meet your shopping dreams. Whether it’s groceries or essentials, get it all delivered swiftly to your doorstep!</p>
+        <button class="learn-more-btn">Explore More</button>
     </section>
 
-    <!-- Testimonials -->
+
     <section class="testimonials">
-        <div class="container">
-            <h2>Testimonials</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-item">
-                    <img src="testimonial1.png" alt="Bob">
-                    <p>“World Mart has always been my go-to for fast deliveries and quality products. Highly recommended!”</p>
-                    <h4>Bob</h4>
-                </div>
-                <div class="testimonial-item">
-                    <img src="testimonial2.png" alt="Charlie">
-                    <p>“The customer service is top-notch and the ease of shopping is unmatched. Kudos to the World Mart team!”</p>
-                    <h4>Charlie</h4>
-                </div>
-                <div class="testimonial-item">
-                    <img src="testimonial3.png" alt="John">
-                    <p>“I've been using World Mart for years, and they never fail to deliver the best products at my doorstep.”</p>
-                    <h4>John</h4>
-                </div>
+        <h2>Testimonials</h2>
+        <p class="testimonial-subtitle">This is what our customers say about World Mart</p>
+        
+        <div class="testimonial">
+            <img src="path/to/bob.jpg" alt="Bob" class="testimonial-img">
+            <div class="testimonial-content">
+                <h3>Bob</h3>
+                <p>World Mart has truly changed the way I shop online. The product selection is astounding, and the prices are unbeatable. Whether I'm stocking up on essentials or gifting, I always find exactly what I need.</p>
+            </div>
+        </div>
+        
+        <div class="testimonial">
+            <img src="path/to/charlie.jpg" alt="Charlie" class="testimonial-img">
+            <div class="testimonial-content">
+                <h3>Charlie</h3>
+                <p>Best shopping website ever! I've tried many different platforms, but none compares to World Mart. The user interface is intuitive and easy to navigate, making it simple to find what I'm looking for.</p>
+            </div>
+        </div>
+        
+        <div class="testimonial">
+            <img src="path/to/john.jpg" alt="John" class="testimonial-img">
+            <div class="testimonial-content">
+                <h3>John</h3>
+                <p>I've been a loyal customer of World Mart for years, and for good reason. The sheer variety of products available is incredible, and I love that I can find everything I need in one place.</p>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- Call to Action Section -->
+    <section class="call-to-action">
+        <h2>Ready to get started?</h2>
+        <p>Sign up or contact us</p>
+        <button class="signup-btn">Sign Up</button>
+        <button class="contact-btn">Contact Us</button>
+    </section>
+
+    <!-- FAQ Section -->
     <section class="faq">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h3>Is there a refund or return policy?</h3>
-                <p>Yes, we offer a 7-day return policy.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Do you offer any discounts or promotions?</h3>
-                <p>Yes, we regularly update our discounts and promotions section for the latest deals.</p>
-            </div>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-items">
+            <div class="faq-item">Is there a refund or return policy?</div>
+            <div class="faq-item">Do you offer any discounts or promotions?</div>
+            <div class="faq-item">How often do you release updates or new features?</div>
+            <div class="faq-item">What are the payment options available?</div>
+            <div class="faq-item">How do I reset my password if I forget it?</div>
+            <div class="faq-item">How can I cancel my order?</div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-info">
-                <h4>Contact Us</h4>
-                <p>Email: support@worldmart.com</p>
-                <p>Phone: +123 456 7890</p>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="logo.png" alt="World Mart Logo">
+                <p>Bringing you closer to your shopping dreams. Shop with ease and convenience.</p>
             </div>
-            <div class="footer-socials">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+            <div class="footer-center">
+                <h3>Main Menu</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h3>Contact Us</h3>
+                <p>Address: 123 World Mart Ave, City</p>
+                <p>Email: support@worldmart.com</p>
+                <p>Phone: +1 (234) 567-890</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
+        <p class="footer-bottom-text">© 2024 World Mart. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>

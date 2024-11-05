@@ -14,8 +14,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Kamber';
+    src: url('../fonts/Kamber_SemiBold.ttf') format('truetype'); /* For older browsers */
+    font-weight: 400; /* Adjust this if necessary */
+    font-style: normal;
+}
+
+
 body {
-    font-family: 'Como', sans-serif;
+    font-family: 'Como', 'Kamber', sans-serif;
     color: #fff0e1;
     background-color: #047562;
 
@@ -514,16 +522,16 @@ body {
 }
 
 .toggle {
-    background-color: #1a5252;
+    background-color: #0f2928;
     color: #fff0e1;
     border: none;
     padding: 0.5rem 1rem;
-    border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .toggle.active {
+    border-radius: 15px;
     background-color: #24a19c;
 }
 
@@ -736,21 +744,6 @@ ul li i {
         height: auto;
     }
 
-    .card-testimonials {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        padding: 0;
-        gap: 10px;
-    }
-
-    .testimonial {
-        width: 100%;
-        max-width: 100%;
-        margin-bottom: 10px;
-    }
-
     /* Adjust styles for specific items if necessary */
     .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8 {
         width: 100%;
@@ -761,6 +754,7 @@ ul li i {
         position: relative;
         flex-direction: column;
         width: 80%;
+        min-height: 200vh;
         margin: 0 auto;
     }
 
@@ -770,15 +764,14 @@ ul li i {
     .expertise-card:nth-child(4),
     .expertise-card:nth-child(5),
     .expertise-card:nth-child(6) {
-        transform: rotate(0deg);
-        --rotate-angle: 0deg;
+        position: inherit;
         left: 0;
         top: 0;
         right: 0;
         bottom: 0;
-        margin-bottom: 300px;
+        margin-bottom: 80px;
+        padding: 100px 10px;
     }
-    .expertise-card:nth-child(2) { top: 30; }
     
     
     /* Additional styles for icons and other components, if needed */
@@ -811,6 +804,10 @@ ul li i {
 
     .social-icons a {
         margin-left: 10px; /* Space between social icons */
+    }
+
+    .hero_img, .why_us_img, .uiux_img, .expertise_img, .testimonial_img {
+        max-width: 50%;
     }
 
     .pricing_img{

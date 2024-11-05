@@ -10,14 +10,14 @@
     src: url('../fonts/Como_SemiBold.woff2') format('woff2'), /* For modern browsers */
          url('../fonts/Como_SemiBold.woff') format('woff'),   /* For older browsers */
          url('../fonts/Como_SemiBold.ttf') format('truetype'); /* For older browsers */
-    font-weight: 400; /* Adjust this if necessary */
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Kamber';
     src: url('../fonts/Kamber_SemiBold.ttf') format('truetype'); /* For older browsers */
-    font-weight: 400; /* Adjust this if necessary */
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -39,7 +39,7 @@ body {
 
     /* Left border shadow */
     box-shadow: -5px 0 10px #011313;
-    margin: 0; /* To remove any default body margin */
+    margin: 0;
 }
 
 /* underline img styling */
@@ -116,7 +116,7 @@ body {
 }
 
 .highlight {
-    color: #e7f0f2; /* Gold color for highlight */
+    color: #e7f0f2;
     font-weight: 800;
 }
 
@@ -178,7 +178,7 @@ body {
 
 /* Why Clients Choose Us Section */
 .why-choose-us {
-    background-color: #0f3b3d; /* Dark green background as in the image */
+    background-color: #0f3b3d;
     padding: 2rem;
     text-align: center;
     color: #fff0e1;
@@ -193,7 +193,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    flex-wrap: wrap; /* Make it wrap for mobile responsiveness */
+    flex-wrap: wrap;
 }
 
 .feature {
@@ -229,7 +229,6 @@ body {
     line-height: 1.5;
 }
 
-/*//////////////////////////////////*/
 
 /* UI/UX Designs Section */
 .ui-ux-designs {
@@ -239,17 +238,17 @@ body {
 
 .design-gallery {
     display: grid;
-    grid-template-rows: repeat(10, auto); /* Use auto to allow images to fit */
+    grid-template-rows: repeat(10, auto);
     grid-template-columns: 4fr 3fr 2fr 2fr; /* Original layout for larger screens */
-    gap: 2.5px; /* Smaller gap for a tighter layout */
+    gap: 2.5px;
     width: 75%;
-    height: 80vh; /* Allow height to adjust based on content */
+    height: 80vh;
     margin: 0 auto;
     background-color: #000;
     padding: 2.5px;
 }
 
-/* Position images according to the layout */
+/* Positioning images according to the layout */
 .design-gallery a:nth-child(1) { 
     grid-column: 1 / 2;
     grid-row: 1 / 4; 
@@ -298,9 +297,9 @@ body {
 }
 
 .design-gallery a img {
-    width: 100%; /* Make the image fill the anchor */
-    height: auto; /* Maintain the aspect ratio */
-    max-height: 100%; /* Prevent the image from exceeding the anchor's height */
+    width: 100%;
+    height: auto;
+    max-height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -404,7 +403,7 @@ body {
 }
 
 
-/* Smooth bounce animation that retains the initial rotation */
+/* Smooth bounce animation */
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0) rotate(var(--rotate-angle));
@@ -577,32 +576,27 @@ body {
     position: relative;
 }
 
-/* Default highlight for the center card */
 .plan-card.highlighted {
     background: linear-gradient(90deg, #2a7976, #125a5a, #2a7976);
     transform: scale(1.1);
 }
 
-/* De-emphasize non-hovered cards and reset highlighted button style */
 .plans:hover .plan-card:not(:hover) {
     transform: scale(0.95);
     background: linear-gradient(90deg, #030909, #0f2928, #030909);
 }
 
-/* Revert .highlighted .btn style when another card is hovered */
 .plans:hover .plan-card:not(:hover) .btn {
     background-color: #1a5252;
     color: #fff0e1;
     border-radius: 8px;
 }
 
-/* Emphasize only the hovered card */
 .plan-card:hover {
     transform: scale(1.1);
     background: linear-gradient(90deg, #2a7976, #125a5a, #2a7976);
 }
 
-/* Styles within the hovered .plan-card */
 .plan-card:hover .btn {
     background-color: #fff0e1;
     color: #1a5252;
@@ -610,7 +604,6 @@ body {
     cursor: pointer;
 }
 
-/* Highlight button styles */
 .plan-card h5 {
     font-size: 1rem;
     color: #e7f0f2;
@@ -622,7 +615,6 @@ body {
     margin: 0.5rem 0;
 }
 
-/* Default button styling */
 .btn {
     background-color: #1a5252;
     color: #fff0e1;
@@ -633,7 +625,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Highlighted button style and hover effect */
 .highlighted .btn, .btn:hover {
     background-color: #fff0e1;
     color: #1a5252;
@@ -716,7 +707,6 @@ ul li i {
 }
 
 /* Responsive Styling */
-/* Responsive Styling */
 @media screen and (max-width: 768px) {
     .hero-content h1 {
         font-size: 3em;
@@ -774,19 +764,18 @@ ul li i {
     }
     
     
-    /* Additional styles for icons and other components, if needed */
     .fa-crown {
-        top: 530px; /* Adjusted position as per your original code */
+        top: 530px;
     }
 
     .features, .plans, .expertise-cards, .testimonials, .footer-content {
-        flex-direction: column; /* Stack features, plans, etc. */
-        align-items: center; /* Center items */
+        flex-direction: column;
+        align-items: center;
     }
 
     .feature, .plan-card {
-        width: 100%; /* Full width for features and plan cards */
-        max-width: 300px; /* Optional: max width */
+        width: 100%; 
+        max-width: 300px; 
     }
 
     .projects-showcase {
@@ -794,16 +783,16 @@ ul li i {
     }
 
     .projects-showcase a, .expertise-card, .testimonial-item {
-        width: 100%; /* Full width for showcase and testimonials */
-        max-width: 100%; /* Ensure it doesn't exceed the container */
+        width: 100%;
+        max-width: 100%; 
     }
 
     .logo-section {
-        margin-bottom: 15px; /* Margin for logo */
+        margin-bottom: 15px;
     }
 
     .social-icons a {
-        margin-left: 10px; /* Space between social icons */
+        margin-left: 10px;
     }
 
     .hero_img, .why_us_img, .uiux_img, .expertise_img, .testimonial_img {
